@@ -1,51 +1,59 @@
-# Project Idea Submission: Expense Tracker
+# Project Idea Submission: Expense Tracker 
 
 ## 1. Project Title
-SmartExpense: Mobile Expense Tracking & Budgeting App
+SQLExpense: Database-Driven Expense Tracker
 
-## 2. Your Name & Roll Number
-[Your Name] - [Your Roll Number]
+## 2. Name & URN Number
+Krrish Taneja - 2024-B-07032006C
 
 ## 3. Problem Statement
-Many students, professionals, and families struggle to manage their day-to-day expenses effectively. Most people rely on manual methods like notebooks, spreadsheets, or memory, which leads to poor financial planning and overspending. Existing expense tracking apps are often cluttered with unnecessary features, lack offline support, or require a subscription. There is a clear need for a simple, intuitive, and mobile-first solution that helps users track, categorize, and analyze their expenses in real time.
+Most expense tracking systems are built with complex frontend and backend technologies. However, for students and beginners, the real challenge is learning **data modeling, relationships, and queries** that form the foundation of any expense tracker. By building an SQL-only project, we can focus on the core — designing normalized tables for expenses, income, categories, and budgets, and writing queries for reporting, analysis, and insights.
 
 ## 4. Proposed Solution / Idea
-SmartExpense is a cross-platform mobile app designed to simplify daily financial management. The app will allow users to log expenses and income manually, categorize transactions, and visualize their spending patterns through an intuitive dashboard. A key feature will be smart categorization using AI — the app will suggest categories (e.g., Food, Travel, Bills) based on past entries and transaction keywords. The app will also include budget-setting features and alerts to help users stay within limits.
+SQLExpense will be a **database project** where all expense management happens via SQL queries. The solution will include:  
+- A relational database schema for users, categories, transactions, and budgets.  
+- Queries to add expenses/income, categorize transactions, and update records.  
+- Views and aggregate queries to generate financial summaries (monthly spend, category-wise spend, total income vs expenses).  
+- Export-ready reports generated using SQL (with `SELECT INTO` or `COPY` statements depending on RDBMS).  
 
 ## 5. Key Features
-- **Quick Add Transactions:** Simple interface to log income or expense in under 5 seconds.  
-- **Smart Categorization:** AI-powered suggestions for transaction categories (Food, Transport, Utilities, etc.).  
-- **Budget Management:** Set monthly/weekly budgets and get alerts when nearing the limit.  
-- **Real-Time Dashboard:** Visual charts showing spending breakdowns, savings trends, and category-wise distribution.  
-- **Export & Backup:** Export expense reports in PDF/CSV and enable cloud backup with Firebase.  
-- **Dark Mode & Offline Mode:** Accessibility-friendly features ensuring smooth usage without internet.  
+- **Add Transactions:** Insert queries for income and expense records with date, amount, category, and description.  
+- **Category Management:** Separate table for categories (Food, Travel, Rent, Bills, etc.).  
+- **Budget Tracking:** A budget table with category/monthly limits; SQL queries will check overspending.  
+- **Reports & Dashboard:**  
+  - Monthly expense report (using `GROUP BY` and `SUM`).  
+  - Category-wise breakdown.  
+  - Balance (Income – Expenses).  
+- **Data Integrity:** Foreign keys, constraints, and triggers to ensure valid entries.  
 
 ## 6. Target Users / Audience
-- College students managing limited pocket money.  
-- Working professionals wanting to budget monthly expenses.  
-- Families tracking household spending.  
-- Freelancers managing personal and work-related expenses.  
+- Students learning SQL through practical projects.  
+- Small businesses or individuals needing a lightweight, SQL-based expense system.  
+- Educators using SQLExpense as a teaching tool for database concepts.  
 
 ## 7. Technology Stack
-- **Mobile Framework:** React Native (cross-platform for Android & iOS)  
-- **Backend:** Node.js with Express.js  
-- **Database:** Firebase Firestore (or MongoDB)  
-- **AI/ML:** TensorFlow Lite or ML Kit for smart categorization  
-- **Authentication & Cloud:** Firebase Authentication + Firebase Cloud Storage  
-- **Deployment:** Google Play Store & Apple App Store  
+- **Database:** MySQL / PostgreSQL / SQLite  
+- **Data Export:** SQL queries (`SELECT INTO OUTFILE` / `COPY TO CSV`)  
+- **Optional:** CLI client (MySQL Workbench, pgAdmin, or SQLite Browser) for interaction  
 
 ## 8. Expected Outcome
-The final output will be a mobile application that enables users to effortlessly track and categorize their expenses. SmartExpense should allow users to log a transaction in under 5 seconds, provide category suggestions with at least 90% accuracy, and display real-time financial insights through visual dashboards. Users will gain better control over their finances and improve budgeting habits.
+A fully functional SQL database where:  
+- Users can insert expenses/income with a single query.  
+- Category-wise and monthly summaries can be generated.  
+- Budgets can be tracked, with overspending highlighted using queries.  
+- Reports can be exported into CSV/PDF (via SQL tools).  
 
 ## 9. Timeline (Optional)
-- **Week 1–2:** Research, feature finalization, and UI/UX design in Figma.  
-- **Week 3–4:** Backend setup, database schema, and authentication.  
-- **Week 5–6:** Develop frontend screens (Add Expense, Dashboard, Reports).  
-- **Week 7–8:** Implement smart categorization with ML.  
-- **Week 9:** Budget management and alerts system.  
-- **Week 10:** Testing, bug fixes, and performance improvements.  
-- **Week 11–12:** Deployment and user feedback collection.  
+- **Week 1:** Research and design the ER diagram & schema.  
+- **Week 2:** Create tables, relationships, and constraints.  
+- **Week 3:** Write queries for adding, updating, deleting, and fetching transactions.  
+- **Week 4:** Implement reporting queries (monthly summary, budgets).  
+- **Week 5:** Test with dummy data and refine schema.  
+- **Week 6:** Export reports and finalize documentation.  
 
 ## 10. Additional Notes
-- **Key Challenge:** Ensuring fast, offline-friendly usage while maintaining synchronization with cloud storage.  
-- **Future Scope:** Integration with UPI/SMS for auto-detection of transactions, multi-currency support, and AI-driven financial advice.  
+- **Key Challenge:** Designing queries that are both efficient and flexible for real-world reporting.  
+- **Future Scope:**  
+  - Add stored procedures for automated monthly reports.  
+  - Implement triggers for budget alerts.  
+  - Build a small frontend later that just runs SQL queries in the background.  
