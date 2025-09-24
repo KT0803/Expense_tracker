@@ -30,4 +30,4 @@ await AsyncStorage.removeItem(TRANSACTIONS_KEY);
 } catch (e) {
 console.error('Failed to clear transactions', e);
 }
-}
+};
