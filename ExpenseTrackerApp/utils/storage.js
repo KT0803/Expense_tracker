@@ -10,7 +10,7 @@ const json = await AsyncStorage.getItem(TRANSACTIONS_KEY);
 return json ? JSON.parse(json) : [];
 } catch (e) {
 console.error('Failed to load transactions', e);
-return [];
+return []
 }
 }
 
